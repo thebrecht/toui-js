@@ -1,0 +1,52 @@
+{
+  "name": "@toui/client",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for the toui.io URL shortener — shorten, lookup, and click stats.",
+  "keywords": [
+    "url-shortener",
+    "toui",
+    "toui.io",
+    "qr-code",
+    "link-analytics",
+    "sdk",
+    "typescript"
+  ],
+  "homepage": "https://toui.io",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebrecht/toui-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thebrecht/toui-js/issues"
+  },
+  "author": "Brecht Huang <hello@toui.io>",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
