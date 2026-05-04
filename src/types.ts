@@ -25,7 +25,7 @@ export interface ShortenResult {
   short_code: string;
   /** Final destination URL after normalization. */
   target_url: string;
-  /** ISO 8601 timestamp. */
+  /** Server timestamp in `YYYY-MM-DD HH:MM:SS` format (UTC). */
   created_at: string;
 }
 
@@ -34,7 +34,9 @@ export interface UrlDetails {
   target_url: string;
   title: string | null;
   click_count: number;
+  /** Server timestamp in `YYYY-MM-DD HH:MM:SS` format (UTC). */
   created_at: string;
+  /** Normalized to a real boolean by the SDK (the API returns 0/1). */
   is_active: boolean;
   og_title: string | null;
   og_description: string | null;

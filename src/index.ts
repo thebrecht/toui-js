@@ -48,7 +48,11 @@ export class Toui {
    */
   async get(shortCode: string): Promise<UrlDetails> {
     assertCode(shortCode);
-    return this.#request<UrlDetails>('GET', `/api/v1/urls/${encodeURIComponent(shortCode)}`);
+    const raw = await this.#request<Omit<UrlDetails, 'is_active'> & { is_active: boolean | 0 | 1 }>(
+      'GET',
+      `/api/v1/urls/${encodeURIComponent(shortCode)}`,
+    );
+    return { ...raw, is_active: Boolean(raw.is_active) };
   }
 
   /**
