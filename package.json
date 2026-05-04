@@ -1,5 +1,5 @@
 {
-  "name": "@toui/client",
+  "name": "toui-js",
   "version": "0.1.0",
   "description": "TypeScript SDK for the toui.io URL shortener — shorten, lookup, and click stats.",
   "keywords": [
@@ -45,8 +45,5 @@
   },
   "engines": {
     "node": ">=18"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

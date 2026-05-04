@@ -1,4 +1,4 @@
-# @toui/client
+# toui-js
 
 Tiny TypeScript SDK for the [toui.io](https://toui.io) URL shortener.
 
@@ -13,11 +13,11 @@ Built on `fetch`. Works in Node 18+, Bun, Deno, Cloudflare Workers, and modern b
 ## Install
 
 ```sh
-npm install @toui/client
+npm install toui-js
 # or
-pnpm add @toui/client
+pnpm add toui-js
 # or
-bun add @toui/client
+bun add toui-js
 ```
 
 ## Quick start
@@ -25,7 +25,7 @@ bun add @toui/client
 Get an API key at [toui.io/admin/api-keys](https://toui.io/admin/api-keys) (the Free plan includes API access).
 
 ```ts
-import { Toui } from '@toui/client';
+import { Toui } from 'toui-js';
 
 const toui = new Toui({ apiKey: process.env.TOUI_API_KEY! });
 
@@ -95,7 +95,7 @@ const stats = await toui.stats('aBcD3f', { days: 7 });
 All API failures throw a `TouiError`:
 
 ```ts
-import { Toui, TouiError } from '@toui/client';
+import { Toui, TouiError } from 'toui-js';
 
 try {
   await toui.shorten({ url: 'not-a-url' });
@@ -134,7 +134,7 @@ const links = await pool(urls, 5, (url) => toui.shorten({ url }));
 ### Cloudflare Worker
 
 ```ts
-import { Toui } from '@toui/client';
+import { Toui } from 'toui-js';
 
 export default {
   async fetch(req: Request, env: { TOUI_API_KEY: string }): Promise<Response> {
@@ -150,7 +150,7 @@ export default {
 
 ```ts
 // app/api/shorten/route.ts
-import { Toui } from '@toui/client';
+import { Toui } from 'toui-js';
 
 const toui = new Toui({ apiKey: process.env.TOUI_API_KEY! });
 
