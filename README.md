@@ -1,6 +1,6 @@
 # toui-js
 
-Tiny TypeScript SDK for the [toui.io](https://toui.io) URL shortener.
+Tiny TypeScript SDK for [toui.io](https://toui.io) — shorten links and read their stats.
 
 Three things, no dependencies:
 

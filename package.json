@@ -1,7 +1,7 @@
 {
   "name": "toui-js",
   "version": "0.1.0",
-  "description": "TypeScript SDK for the toui.io URL shortener — shorten, lookup, and click stats.",
+  "description": "TypeScript SDK for toui.io — shorten links, look them up, and read click stats.",
   "keywords": [
     "url-shortener",
     "toui",
